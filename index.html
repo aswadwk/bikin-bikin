@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hii Cantik</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="h-screen w-screen bg-slate-800 flex pt-10 ">
+        <div class="container mx-auto flex flex-col items-center">
+            <h1 class="text-pink-400 font-bold  tracking-widest text-2xl mb-6">
+                Hii Cantikk !
+            </h1>
+            <img class="w-50 h-40 rounded-sm" src="https://c.tenor.com/rZ70t5nGI3EAAAAC/poke-milk-and-mocha.gif"
+                alt="img-gif">
+            <div class="mt-6">
+                <h2 class="text-pink-300 font-semibold">Maukah kamu jadi pacarku ?</h2>
+            </div>
+            <div class="mt-4">
+                <button id="btn-mau" onclick="alert('I Love You !')"
+                    class="border-2 border-pink-600 bg-pink-600 py-2 px-4 text-gray-200 rounded-sm hover:scale-105">Mau</button>
+            </div>
+            <button id="btn-nolak" onclick="gakMau(this)"
+                class="border-2 border-pink-600 py-2 px-4 text-gray-200 rounded-sm absolute bottom-20">
+                Gak Mau</button>
+        </div>
+
+
+        <script>
+            function gakMau(id) {
+                let mau = document.getElementById('btn-mau');
+                let i = Math.floor(Math.random() * 100) + 1;
+                let j = Math.floor(Math.random() * 100) + mau;
+
+                id.style.top = j + 'px';
+                id.style.left = i + 'px';
+                // id.style.right = i + 'px';
+            }
+        </script>
+    </div>
+</body>
+
+</html>
